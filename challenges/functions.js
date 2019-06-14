@@ -41,7 +41,9 @@ function greeting (firstN, lastN) {
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+// `nestedfunction()` can access the variable `internal` because as the `console.log(internal);'
+// statement runs, the function will look outside the scope chain (in this case, nestedfunction())
+// to search for const internal in the outer scope.
 
 const external = "I'm outside the function";
 
