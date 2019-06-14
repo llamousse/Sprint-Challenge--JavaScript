@@ -70,6 +70,7 @@ const universities = [];
 for (let i = 0; i < graduates.length; i++) {
   universities.push(graduates[i].university);
 }
+universities.sort();
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -86,12 +87,15 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-// const uni = [];
-const uni = graduates.filter((state) => {
-  return state.university.includes("Uni");
-});
-console.log(uni);
 
+const uni = [];
+for (let i = 0; i < graduates.length; i++) {
+  if(graduates[i].university.includes("Uni")) {
+    uni.push(graduates[i].university)
+  } else {}
+}
+
+console.log(uni);
 
 // ==== ADVANCED Array Methods ====
 
